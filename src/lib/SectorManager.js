@@ -12,6 +12,7 @@ const SectorManager = props => {
 };
 SectorManager.displayName = 'SectorManager';
 SectorManager.propTypes = {
+  code: PropTypes.string.isRequired,
   sectors: PropTypes.node.isRequired
 };
 

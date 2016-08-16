@@ -15,6 +15,7 @@ const Sector = props => {
 };
 Sector.displayName = 'Sector';
 Sector.propTypes = {
+  tagName: PropTypes.string,
   code: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };
