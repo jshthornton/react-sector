@@ -9,7 +9,7 @@ How often have you found yourself building a reusable layout in React only to ha
 
 For example:
 
-```
+```javascript
 // Layout
 return (
   <div>
@@ -41,7 +41,7 @@ Wouldn't it be easier if you could render sections via components? and have them
 
 ## Usage
 
-```
+```javascript
 // Layout
 import { SectorManager } from 'react-sector';
 
@@ -79,7 +79,7 @@ That's it. Sector manager will now take care of rendering your elements for you.
 
 ### Sector
 
-```
+```javascript
 import Sector from 'react-sector/lib/Sector'; // Recommended for smaller builds
 import { Sector } from 'react-sector';
 
@@ -93,7 +93,7 @@ import { Sector } from 'react-sector';
 
 ### SectorManager
 
-```
+```javascript
 import SectorManager from 'react-sector/lib/SectorManager'; // Recommended for smaller builds
 import { SectorManager } from 'react-sector';
 
