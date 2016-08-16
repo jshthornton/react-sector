@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
 
-const findSectorToRender = (sectors, id) => {
-  return _.find(sectors, sector => sector.props.id === id);
+const findSectorToRender = (sectors, code) => {
+  return _.find(sectors, sector => sector.props.code === code);
 };
 
 const SectorManager = props => {
-  const sector = findSectorToRender(props.sectors, props.id);
+  const sector = findSectorToRender(props.sectors, props.code);
 
   return sector;
 };

@@ -1,4 +1,5 @@
 import SectorManager from '../SectorManager';
+import Sector from '../Sector';
 import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import React from 'react';
@@ -10,13 +11,15 @@ describe('<SectorManager/>', function() {
 
   it('renders the sector at with matching id', function() {
     const sector = (
-      <div id="test"/>
+      <Sector code="test">
+        <div id="foo"/>
+      </Sector>
     );
 
     const wrapper = shallow(
-      <SectorManager id="test" sectors={[sector]}/>
+      <SectorManager code="test" sectors={[sector]}/>
     );
 
-    expect(wrapper.contains(sector)).to.equal(true);
+    expect(wrapper.contains(<div id="foo"/>)).to.equal(true);
   });
 });
