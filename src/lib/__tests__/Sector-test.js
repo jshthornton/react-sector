@@ -17,4 +17,24 @@ describe('<Sector/>', function() {
 
     expect(wrapper.prop('code')).to.equal(void 0);
   });
+
+  it('does not apply the `tagName` prop', function() {
+    const wrapper = shallow(
+      <Sector code="test">
+        <div id="foo"/>
+      </Sector>
+    );
+
+    expect(wrapper.prop('tagName')).to.equal(void 0);
+  });
+
+  it('can alter the tagName via `tagName` prop', function() {
+    const wrapper = shallow(
+      <Sector tagName="span" code="test">
+        <div id="foo"/>
+      </Sector>
+    );
+
+    expect(wrapper.is('span')).to.equal(true);
+  });
 });
