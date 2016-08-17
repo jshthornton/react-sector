@@ -1,3 +1,7 @@
+language: node_js
+node_js:
+  - "6.1"
+
 install:
   - sudo npm install -g grunt
   - npm install
