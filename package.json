@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --compilers js:babel-register 'src/**/*-test.js'"
+    "test": "node_modules/.bin/mocha --compilers js:babel-register 'src/**/*-test.js'",
+    "lint": "node_modules/.bin/grunt eslint"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,10 @@
     "load-grunt-tasks": "^3.3.0",
     "mocha": "^3.0.2",
     "react-addons-test-utils": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "eslint": "^3.2.2",
+    "eslint-plugin-react": "^6.0.0",
+    "gruntify-eslint": "^3.0.0"
   },
   "dependencies": {
     "redux-create-reducer": "^1.1.1"

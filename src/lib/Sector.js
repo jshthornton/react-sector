@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 
 const Sector = props => {
   const {
-    code,
-    tagName,
+    code, // eslint-disable-line no-unused-vars
+    tagName, // eslint-disable-line no-unused-vars
     ...rest
   } = props;
 

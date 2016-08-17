@@ -2,6 +2,7 @@ var path = require('path');
 
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('gruntify-eslint');
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -14,6 +15,9 @@ module.exports = function(grunt) {
         src: ['**/*.js', '!**/__tests__/**'],
         dest: './'
       }
+    },
+    eslint: {
+      src: ['src/**/*.js', '!src/**/__tests__/**']
     }
   });
 
