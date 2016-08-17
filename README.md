@@ -1,6 +1,7 @@
 # react-sector
 
 [![Build Status](https://travis-ci.org/jshthornton/react-sector.svg?branch=master)](https://travis-ci.org/jshthornton/react-sector)
+[![npm version](https://badge.fury.io/js/react-sector.svg)](https://badge.fury.io/js/react-sector)
 [![dependencies Status](https://david-dm.org/jshthornton/react-sector/status.svg)](https://david-dm.org/jshthornton/react-sector)
 [![devDependencies Status](https://david-dm.org/jshthornton/react-sector/dev-status.svg)](https://david-dm.org/jshthornton/react-sector?type=dev)
 [![peerDependencies Status](https://david-dm.org/jshthornton/react-sector/peer-status.svg)](https://david-dm.org/jshthornton/react-sector?type=peer)
