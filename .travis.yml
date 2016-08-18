@@ -1,13 +1,20 @@
 language: node_js
 node_js:
-  - "6.1"
-
+- '6.1'
 install:
-  - npm install -g grunt
-  - npm install
-  - npm info . peerDependencies | sed -n 's/^{\{0,1\}[[:space:]]*'\''\{0,1\}\([^:'\'']*\)'\''\{0,1\}:[[:space:]]'\''\([^'\'']*\).*$/\1@\2/p' | xargs npm i
-
+- npm install -g grunt
+- npm install
+- npm info . peerDependencies | sed -n 's/^{\{0,1\}[[:space:]]*'\''\{0,1\}\([^:'\'']*\)'\''\{0,1\}:[[:space:]]'\''\([^'\'']*\).*$/\1@\2/p'
+  | xargs npm i
 script:
-  - npm run lint
-  - npm test
-  - grunt babel
+- npm run lint
+- npm test
+- grunt babel
+deploy:
+  provider: npm
+  email: jshthornton@gmail.com
+  api_key:
+    secure: cKhdeHva2/cd/nqnu9y6AUDW4UuAcNpCyeg9zl9bVtFSPwRadalbVPsQe5I1lUMKO9FxJwm4N21PIcpkp525477CjxsfLieGrlCt80RJiz+1HZVb+rF8Tg1aKQ/M/vk9Q4AJ9Gm3RyETEi9mJV6FzYtBRRwChLpKLiQ1XTcCmqPNiY/Msvyz52nweqwSodqlwEwklmIxmoddlVSjJUfvc9w0Lss4OP/J7+QYGTZbeOcOYpfA66DBUfwONzLHonnl8eXat9qKDcbL6UjNybOBz7aLztvYeZIB7S03nO0vBR6HvMHEl1ff/PVskzhRwBh0a/e6AQ9y+FguHKUCbrV3T2OeyqjybBKbn0uyUwNrDCmcNsa+zolJhfanqVEr/hgPDrFFthfKyvHCiFAuun2mMKBIZ24o9ee7bL01Y+hMGqaKAvXJMrYgjMBrU3yPCa83ZOIF+YvakJ8nwvA0R7h+5UUDz31iJjHZ4xGl38e+C/qUcfsUsC8NU+weAHSpH5sHU6EilMjkoJAFefRSW+FHs/pQcvWMnPLoDt4WerEWYYQmaKzmNYG+nWQGGDQq3zyYkqiPq16ZWfzcLJHOSCBdzSi9Q9hcJ2Dq00WYTqDK4InB8sZ5GM+KG9vswID8JdcHqfiNifvP/qkPyFvyAGTUL0dfmaKv22LcFT+IhBsmpj0=
+  on:
+    tags: true
+    repo: jshthornton/react-sector
