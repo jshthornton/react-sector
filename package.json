@@ -37,7 +37,6 @@
     "gruntify-eslint": "^3.0.0"
   },
   "dependencies": {
-    "redux-create-reducer": "^1.1.1"
   },
   "peerDependencies": {
     "react": "^15.3.0",
