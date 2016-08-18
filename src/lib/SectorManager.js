@@ -1,8 +1,16 @@
 import { PropTypes } from 'react';
-import _ from 'lodash';
+import { Children } from 'react';
 
 const findSectorToRender = (sectors, code) => {
-  return _.find(sectors, sector => sector.props.code === code);
+  let foundSector;
+
+  Children.forEach(sectors, sector => {
+    if(sector.props.code === code) {
+      foundSector = sector;
+    }
+  });
+
+  return foundSector;
 };
 
 const SectorManager = props => {
